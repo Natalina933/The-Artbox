@@ -15,18 +15,19 @@ if ($id !== null) {
 }
 ?>
 <article id="detail-oeuvre">
-    <?php if ($o !== null): ?>
+    <?php if ($o !== null) { ?>
         <div id="img-oeuvre">
-            <img src="<?= htmlspecialchars($o['image']); ?>" alt="<?= htmlspecialchars($o['titre']); ?>">
+            //htmlspecialchars est utilisé autour des variables qui sont utilisées dans le HTML pour s'assurer qu'aucun code malveillant ne peut être injecté
+            <img src="<?= ($o['image']); ?>" alt="<?= ($o['titre']); ?>">
         </div>
         <div id="contenu-oeuvre">
-            <h1><?= htmlspecialchars($o['titre']); ?></h1>
-            <p class="description"><?= htmlspecialchars($o['artiste']); ?></p>
+            <h1><?= ($o['titre']); ?></h1>
+            <p class="description"><?= ($o['artiste']); ?></p>
             <p class="description-complete">
-                <?= htmlspecialchars($o['description']); ?>
+                <?= ($o['description']); ?>
             </p>
         </div>
-    <?php endif; ?>
+    <?php } ?>
 </article>
 </main>
 <?php include('footer.php'); ?>
