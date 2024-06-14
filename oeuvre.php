@@ -17,7 +17,6 @@ if ($id !== null) {
 <article id="detail-oeuvre">
     <?php if ($o !== null) { ?>
         <div id="img-oeuvre">
-            //htmlspecialchars est utilisé autour des variables qui sont utilisées dans le HTML pour s'assurer qu'aucun code malveillant ne peut être injecté
             <img src="<?= ($o['image']); ?>" alt="<?= ($o['titre']); ?>">
         </div>
         <div id="contenu-oeuvre">
