@@ -1,5 +1,5 @@
 <?php include('header.php'); ?>
 
 <div>
-    <h1>test</h1>
+    <h1>erreur recupération id dans l'url</h1>
 </div>
