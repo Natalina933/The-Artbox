@@ -12,7 +12,7 @@ if (!$bdd) {
 $sqlquery = $bdd->query('SELECT * FROM oeuvres');
 $oeuvres = $sqlquery->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<main>
+
     <div id="liste-oeuvres">
         <?php foreach ($oeuvres as $oeuvre) : ?>
             <article class="oeuvre">
@@ -24,8 +24,5 @@ $oeuvres = $sqlquery->fetchAll(PDO::FETCH_ASSOC);
             </article>
         <?php endforeach; ?>
     </div>
-
-</main>
 <?php include('footer.php'); ?>
-</body>
-</html>
+

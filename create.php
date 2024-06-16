@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-// ?>
+ ?>
 
 <body>
     <h1>Créer une nouvelle œuvre</h1>

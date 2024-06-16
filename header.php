@@ -13,6 +13,9 @@
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
+                <li><a href="index.php">Ajouter</a></li>
+
             </ul>
         </nav>
     </header>
+    <main>

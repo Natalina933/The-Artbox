@@ -1,2 +1,5 @@
-<?php require('header.php');?>
+<?php include('header.php'); ?>
 
+<div>
+    <h1>test</h1>
+</div>
