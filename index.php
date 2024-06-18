@@ -19,15 +19,15 @@ try {
 }
 ?>
 
-    <div id="liste-oeuvres">
-        <?php foreach ($oeuvres as $oeuvre) : ?>
-            <article class="oeuvre">
-                <a href="oeuvre.php?oeuvre_id=<?php echo $oeuvre['oeuvre_id'] ?>">
-                    <img src="<?= $oeuvre['oeuvre_img'] ?>" alt="<?= $oeuvre['oeuvre_name'] ?>">
-                    <h2><?= $oeuvre['oeuvre_name'] ?></h2>
-                    <p class="description"><?= $oeuvre['oeuvre_artiste'] ?></p>
-                </a>
-            </article>
-        <?php endforeach; ?>
-    </div>
+<div id="liste-oeuvres">
+    <?php foreach ($oeuvres as $oeuvre) : ?>
+        <article class="oeuvre">
+            <a href="oeuvre.php?id=<?php echo $oeuvre['oeuvre_id'] ?>">
+                <img src="<?= $oeuvre['oeuvre_img'] ?>" alt="<?= $oeuvre['oeuvre_name'] ?>">
+                <h2><?= $oeuvre['oeuvre_name'] ?></h2>
+                <p class="description"><?= $oeuvre['oeuvre_artiste'] ?></p>
+            </a>
+        </article>
+    <?php endforeach; ?>
+</div>
 <?php include('footer.php'); ?>

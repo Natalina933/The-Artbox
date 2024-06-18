@@ -9,13 +9,13 @@ if (!$bdd) {
 }
 
 // Vérifier si un ID est fourni dans l'URL
-if (!isset($_GET['oeuvre_id'])) {
-    header('Location: test.php');
+if (!isset($_GET['id'])) {
+    header('Location: error.php');
     exit;
 }
 
 // Récupérer l'ID de l'œuvre depuis l'URL et s'assurer qu'il est un entier
-$id = intval($_GET['oeuvre_id']);
+$id = intval($_GET['id']);
 
 // Préparer et exécuter la requête pour récupérer l'œuvre correspondante
 $sqlquery = $bdd->prepare('SELECT * FROM oeuvre WHERE oeuvre_id = ?');
@@ -26,7 +26,7 @@ $o = $sqlquery->fetch(PDO::FETCH_ASSOC);
 
 // Vérifier si l'œuvre est trouvée
 if (!$o) {
-    header('Location: test.php');
+    header('Location: error.php');
     exit;
 }
 ?>
