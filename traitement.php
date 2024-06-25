@@ -10,7 +10,7 @@ if (!$bdd) {
 
 // Vérifie si les champs obligatoires (titre, description, image) sont remplis,
 // si la description a au moins 3 caractères et si l'URL de l'image est valide.
-// Si une des conditions n'est pas remplie, la redirection vers la page 'test.php' est effectuée.
+// Si une des conditions n'est pas remplie, la redirection vers la page 'error.php' est effectuée.
 if (
     empty($_POST['oeuvre_name'])
     || empty($_POST['oeuvre_artiste'])
@@ -18,7 +18,7 @@ if (
     || strlen($_POST['oeuvre_desc']) < 3
     || !filter_var($_POST['oeuvre_img'], FILTER_VALIDATE_URL)
 ) {
-    header('Location: test.php?erreur=true');
+    header('Location: error.php?erreur=true');
     exit;
 } else {
     // Nettoie les données d'entrée pour éviter les injections de code.
